@@ -1,0 +1,127 @@
+/**/
+body {
+    font-family: arial;
+    font-size: small;	background-color: #727272;
+}
+.box{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+}
+img{
+    display: inline-block;
+    height:250px;
+    width:250px;
+    list-style-position: inside;
+    float: left;
+}
+h1{
+    display: inline-block;
+    max-width: 600px;
+}
+ menu{
+     max-width: 600px;
+     display: inline;
+ }
+li>p{
+    align-items: baseline;
+    min-height: 250px;
+}
+
+#item{
+    min-width: 250px;
+    float:right;
+    text-align: right;
+}
+.rightbox{
+    display: inline;
+    float: right;
+    max-width: 600px;
+}
+#Header{
+    background-color: #1016d8;
+    font-size: 15px;
+    font-family:Arial #3232fe;
+    color: #ffffff;
+    border:solid;
+    border-color:white;
+
+
+
+    -webkit-border-top-left-radius:10px;
+    -moz-border-radius-topleft:10px;
+    border-top-left-radius:10px;
+    -webkit-border-top-right-radius:10px;
+    -moz-border-radius-topright:10px;
+    border-top-right-radius:10px;
+    -webkit-border-bottom-right-radius:10px;
+    -moz-border-radius-bottomright:10px;
+    border-bottom-right-radius:10px;
+    -webkit-border-bottom-left-radius:10px;
+    -moz-border-radius-bottomleft:10px;
+    border-bottom-left-radius:10px;
+}
+.searchbox{
+    min-width: 10%;
+    min-height: 100%;
+    float: left;
+    padding-left : 1%;
+    width: 20%;
+}
+#maindiv {
+    float: left;
+    width: 50%;
+}
+.ListItem{
+    min-width:300px;
+    float: right;
+    border:groove;
+    border-color:white;
+    height: auto;
+}
+.container{
+    width: 100%;
+    border:groove;
+    border-color:white;
+}
+.MenuBar {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #403ffe), color-stop(1, #2dceb0) );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100');
+    background-color: #1e06fe;
+    -webkit-border-top-left-radius:10px;
+    -moz-border-radius-topleft:10px;
+    border-top-left-radius:10px;
+    -webkit-border-top-right-radius:10px;
+    -moz-border-radius-topright:10px;
+    border-top-right-radius:10px;
+    -webkit-border-bottom-right-radius:10px;
+    -moz-border-radius-bottomright:10px;
+    border-bottom-right-radius:10px;
+    -webkit-border-bottom-left-radius:10px;
+    -moz-border-radius-bottomleft:10px;
+    border-bottom-left-radius:10px;
+    text-indent:0px;
+    border:5px solid #37d819;
+    display:inline-block;
+    color: #68ffec;
+    font-family:Arial Black;
+    font-size:27px;
+    font-weight:bold;
+    font-style:normal;
+    height:80%;
+    width: auto;
+    line-height:50px;
+    text-decoration:none;
+    text-align:center;
+}
+.MenuBar:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00) );
+    background:-moz-linear-gradient( center top, #ce0100 5%, #fe1a00 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00');
+    background-color:#ce0100;
+}.MenuBar:active {
+     position:relative;
+     top:1px;
+ }
+        /* This button was generated using CSSButtonGenerator.com and changed */

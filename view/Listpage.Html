@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' href='Listpage.css'>
+    <script>
+        function getList(){
+            var xmlhttp;
+            if (window.XMLHttpRequest){xmlhttp=new XMLHttpRequest();}
+            else{xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");}
+            xmlhttp.onreadystatechange = function (){
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    xmlDoc=xmlhttp;
+                    var txt="";
+                    var list;
+                    eval('list='+xmlDoc.responseText);
+                    list.forEach(function(imovel) {
+                        var t="";
+                        t="<li id:'item' href='imovel/"+imovel.shortname+"' onclick='getItem(href)'><img href='imovel/"+imovel.shortname+"' src="+imovel.pictures[0]+"><p href='imovel/"+imovel.shortname+"'>Imovel : "+imovel.shortname+"<br>preço :"+imovel.weeklyprice+"<br>Morada:"+imovel.loca.local+"<br>Quartos :"+imovel.carateristics.nrooms+"<br></p></li>";
+                        txt=txt+t;
+                    });
+                    document.getElementById("ListItem").innerHTML=txt;
+                }
+            }
+            xmlhttp.open("GET","/List",true);
+            xmlhttp.send();
+        }
+        function getItem(href){
+            var xmlhttp;
+            if (window.XMLHttpRequest){xmlhttp=new XMLHttpRequest();}
+            else{xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");}
+            xmlhttp.onreadystatechange = function (){
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                xmlDoc=xmlhttp;
+                }
+            }
+            xmlhttp.open("GET",href,true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+
+<body>
+
+<div id='Header'>
+
+    <menu type='toolbar' class=' Container'>
+        <h1>www.imovel.com </h1>
+        <menu label='File' >
+                <button class='MenuBar' type='button' onclick='getList()'>Imobiliario</button>
+            <!--<button class='MenuBar' type='button' onclick='file_open()'>Options</button>-->
+
+        </menu>
+</menu>
+
+</div>
+<div class='Container'>
+<div id='searchboxInc' class='searchbox box'>
+    <h2>The search</h2>
+    <form name='input' action='Search.asp' method='get'>
+        Search: <input type='text' name='value'>
+        <input type='submit' value='Submit'>
+    </form>
+    <h2>The Add Imovel</h2>
+    <form name='input' action='/imoveis' method='post'>
+       name: <input type='text' name='user'><br>
+        stuf: <input type='text' name='user'><br>
+        stuff2: <input type='text' name='user'><br>
+        Search: <input type='text' name='user'><br>
+
+        <input type='submit' value='Submit'>
+    </form>
+</div>
+<div id='maindiv' class='box'>
+    <h3>Lista de imoveis</h3>
+    <ul id='ListItem'></ul>
+</div>
+</div>
+</body>
+</html>
